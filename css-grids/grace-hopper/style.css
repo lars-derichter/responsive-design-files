@@ -16,8 +16,6 @@ img {
 
 body {
   display: grid;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 1em;
   font-family: "Orbitron", sans-serif;
   color: #d3d3d3;
@@ -93,19 +91,18 @@ footer {
 /* Media-queries*/
 @media screen and (min-width: 900px) {
   body {
+    max-width: 1200px;
+    margin: 0 auto;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
       "header header header"
       "nav main aside"
       "footer footer footer";
-    grid-template-rows: auto;
-    gap: 10px;
+    grid-gap: 10px;
   }
   main {
-    grid-area: main;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
   }
   main > p {
     grid-column: 1 / span 3;
