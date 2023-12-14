@@ -13,21 +13,12 @@ h1 {
   margin: 0;
 }
 
-.fotogalery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+.fotogallery {
+  display: block;
 }
 
 .foto {
   border: 1px solid silver;
   margin: 1rem 0;
   padding: 1rem;
-}
-
-@media (max-width: 640px) {
-  .fotogalery {
-    justify-content: space-around;
-  }
 }
