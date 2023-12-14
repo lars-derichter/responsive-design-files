@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Vertical navbar</title>
+    <style>
+      /* universal border-box per https://css-tricks.com/box-sizing/ */
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      /* modern clearfix utility class */
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* font */
+      html {
+        font-size: 1.2em; /* beetje groter is wat moderner */
+      }
+
+      /* default styling */
+      body {
+        margin: 0;
+        background-color: #555;
+        color: white;
+        border-radius: 10px;
+      }
+
+      main {
+        margin-top: 4.15rem !important; /* need margin to make space for the navbar - !important because of some silly browser bug */
+        max-width: 45rem;
+        margin: 2rem auto;
+      }
+
+      /* navbar styling */
+      .navbar {
+        position: fixed; /* always visible even when we scroll */
+        width: 100%; /* with fixed I must explicitly declare width */
+        top: 0; /* position at top of page */
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar .logo {
+        display: block;
+        float: left;
+      }
+
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .navbar li,
+      .navbar .logo {
+        padding: 1rem;
+        min-width: 5.2rem; /* this is trial and error to have a consistent width for the active class */
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav-icon {
+        float: right;
+        padding: 1rem;
+      }
+
+      .navbar .active {
+        background-color: #4caf50;
+      }
+
+      /* mobile view */
+      .toggle {
+        display: none;
+        position: absolute; /* over the page content instead of pushing it downwards */
+        top: 3.15rem; /* underneath the logo instead of on top of it */
+        width: 100%; /* full width menu */
+        text-align: right;
+        background-color: #333; /* background color for the toggle block */
+      }
+
+      @media screen and (min-width: 760px) {
+        .nav-icon {
+          display: none;
+        }
+        .navbar {
+          display: flex; /* flexbox so everything is in the same box at the same top */
+        }
+        .toggle {
+          position: static; /* no longer absolute, in the normal flow of the page lay-out */
+          display: flex;
+          justify-content: flex-end; /* aligns the menu items to the right */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Menu -->
+    <nav class="navbar clearfix">
+      <a class="active logo" href="#home">Logo</a>
+      <ul class="toggle" id="myLinks">
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a
+        href="javascript:void(0);"
+        class="nav-icon"
+        onclick="toggle('myLinks')"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+
+    <main>
+      <h3>Vertical Mobile Navbar</h3>
+      <p>
+        This example demonstrates what a navigation menu on a mobile/smart phone
+        could look like.
+      </p>
+      <p>
+        Click on the hamburger icon (three bars) in the top right corner, to
+        toggle the menu.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus,
+        numquam expedita corporis tempore aliquid quis, accusamus temporibus
+        pariatur reiciendis fuga sit minima consectetur assumenda eius. Corrupti
+        recusandae eum facilis.
+      </p>
+      <p>
+        Similique eaque quasi at hic laborum facilis, pariatur cumque sunt unde,
+        voluptatum obcaecati, id ea doloremque veniam? Saepe asperiores
+        voluptatem perspiciatis nisi in, ex, non, expedita repellendus inventore
+        et iste.
+      </p>
+      <p>
+        Voluptatum placeat animi sed alias fugit laborum eum repudiandae est
+        officia praesentium unde ab ut officiis facere reprehenderit qui omnis,
+        corporis sint doloremque! Iusto blanditiis aperiam, praesentium veniam
+        veritatis omnis.
+      </p>
+      <p>
+        Asperiores impedit magni sunt necessitatibus rerum autem cum delectus
+        numquam animi voluptatem, dolorem fugiat facere aliquam ullam tenetur
+        rem eius dicta officiis placeat consequatur vel amet possimus.
+        Repellendus, aspernatur eligendi.
+      </p>
+      <p>
+        Officia minus blanditiis alias dolorem corrupti quaerat porro et dolores
+        consectetur amet ratione ut, sed nisi, architecto, rem eveniet possimus.
+        Aut quos quas optio. Fugit est ab aliquid exercitationem consectetur?
+      </p>
+      <p>
+        Asperiores impedit magni sunt necessitatibus rerum autem cum delectus
+        numquam animi voluptatem, dolorem fugiat facere aliquam ullam tenetur
+        rem eius dicta officiis placeat consequatur vel amet possimus.
+        Repellendus, aspernatur eligendi.
+      </p>
+      <p>
+        Officia minus blanditiis alias dolorem corrupti quaerat porro et dolores
+        consectetur amet ratione ut, sed nisi, architecto, rem eveniet possimus.
+        Aut quos quas optio. Fugit est ab aliquid exercitationem consectetur?
+      </p>
+    </main>
+
+    <script>
+      // This script toggles the visibility of the element with the id el
+      // put this in the onclick property of a link or button.
+      function toggle(el) {
+        var hide = document.getElementById(el);
+        if (hide.style.display === "block") {
+          hide.style.display = "none";
+        } else {
+          hide.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
