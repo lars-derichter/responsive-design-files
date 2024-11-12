@@ -58,6 +58,11 @@
         clear: both;
       }
 
+      /* flowroot */
+      .flowroot {
+        display: flow-root;
+      }
+
       .purple {
         background-color: rebeccapurple;
       }
@@ -70,7 +75,9 @@
     </style>
   </head>
   <body>
-    <h1>Clearfix</h1>
+    <h1>Flow-root (en clearfix)</h1>
+
+    <!-- Probleem -->
     <article class="purple">
       <aside class="float aqua">
         Ook articles kunnen een aside hebben. Dat wisten jullie natuurlijk al
@@ -105,6 +112,8 @@
       Deze div bestaat alleen om de floats hierboven te clearen. En met een
       schone lei te floaten.
     </div>
+
+    <!-- Height ;) -->
     <article class="high purple">
       <aside class="float aqua">Nog zo’n aside binnen een article.</aside>
       <main class="float coral">
@@ -118,6 +127,26 @@
         </p>
       </main>
     </article>
+
+    <h2>Beste, moderne oplossing</h2>
+    <!-- Flowroot -->
+    <article class="flowroot purple">
+      <aside class="float aqua">Nog zo’n aside binnen een article.</aside>
+      <main class="float coral">
+        <h2>Flow-root: de beste oplossing!</h2>
+        <p>
+          De correcte, moderne oplossing: je geeft het parent element dat moet
+          meegroeien met hun floatende kinderen <code>flowroot</code> als waarde
+          voor het <code>display</code>-property.
+        </p>
+        <pre><code>.flowroot {
+  display: flow-root;  
+}</code></pre>
+      </main>
+    </article>
+
+    <h2>Oudere oplossing</h2>
+    <!-- extra div -->
     <article class="purple">
       <aside class="float aqua">Nog zo’n aside binnen een article.</aside>
       <main class="float coral">
@@ -136,6 +165,8 @@
       </main>
       <div class="clear"></div>
     </article>
+
+    <!-- old clearfix -->
     <article class="clearfix purple">
       <aside class="float aqua">Nog zo’n aside binnen een article.</aside>
       <main class="float coral">
