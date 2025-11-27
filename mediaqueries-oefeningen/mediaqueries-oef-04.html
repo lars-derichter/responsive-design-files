@@ -18,13 +18,6 @@
         box-sizing: inherit;
       }
 
-      /* modern clearfix utility class */
-      .clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
       /* font */
       html {
         font-size: 1.2em; /* beetje groter is wat moderner */
@@ -51,8 +44,7 @@
       }
 
       .navbar .logo {
-        display: block;
-        float: left;
+        display: inline-block;
       }
 
       .navbar ul {
@@ -65,6 +57,10 @@
       .navbar .logo {
         padding: 1rem;
         min-width: 5.2rem; /* this is trial and error to have a consistent width for the active class */
+      }
+
+      .navbar .logo {
+        display: inline-block;
       }
 
       .navbar a {
@@ -88,12 +84,7 @@
         top: 3.15rem; /* underneath the logo instead of on top of it */
         width: 100%; /* full width menu */
         text-align: right;
-        background-color: rgba(
-          97,
-          97,
-          97,
-          0.8
-        ); /* background color for the toggle block is partly transparent*/
+        background-color: #333; /* background color for the toggle block */
       }
     </style>
   </head>
