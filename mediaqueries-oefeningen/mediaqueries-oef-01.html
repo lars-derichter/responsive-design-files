@@ -9,16 +9,17 @@
         width: 100%;
         font-family: Arial, Verdana, sans-serif;
         color: #665544;
+        display: grid;
+        grid-template-areas: "column-1 column-2";
+        grid-template-columns: 60% 40%;
       }
 
       .column1of2 {
-        float: left;
-        width: 60%;
+        grid-area: column-1;
       }
 
       .column2of2 {
-        float: left;
-        width: 30%;
+        grid-area: column-2;
       }
     </style>
   </head>

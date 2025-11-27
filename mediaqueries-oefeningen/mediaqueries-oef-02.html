@@ -6,14 +6,23 @@
       body {
         font-family: Arial, Verdana, sans-serif;
         color: #665544;
+        display: grid;
+        grid-template-areas: "col1 col2 col3 col4";
+        grid-template-columns: 1fr 1f 1fr 1fr;
+        gap: 1em;
       }
 
-      .column1of4,
-      .column2of4,
-      .column3of4,
+      .column1of4 {
+        grid-area: col1;
+      }
+      .column2of4 {
+        grid-area: col2;
+      }
+      .column3of4 {
+        grid-area: col3;
+      }
       .column4of4 {
-        float: left;
-        width: 22%;
+        grid-area: col4;
       }
     </style>
   </head>
