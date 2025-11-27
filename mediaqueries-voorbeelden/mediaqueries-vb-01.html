@@ -5,25 +5,33 @@
     <title>Responsive Design 101</title>
     <style>
       /* Mobile first */
+      body {
+        display: grid;
+        grid-template-areas:
+          "main"
+          "aside";
+        grid-template-columns: 100%;
+      }
       main {
+        grid-area: main;
         background-color: #f0f8ff; /* een lichte blauwe kleur */
-        width: 100%;
       }
 
       aside {
+        grid-area: aside;
         background-color: #f0fff0; /* een lichte groene kleur */
-        width: 100%;
+      }
+
+      main,
+      aside {
+        padding: 1rem;
       }
 
       /* Mediaquery voor grotere schermen */
       @media screen and (min-width: 600px) {
-        main {
-          float: left;
-          width: 70%;
-        }
-        aside {
-          float: right;
-          width: 30%;
+        body {
+          grid-template-areas: "main aside";
+          grid-template-columns: 70% 30%;
         }
       }
     </style>
