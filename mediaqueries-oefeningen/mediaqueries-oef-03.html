@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parent Float - Solution</title>
+    <title>Parent Float</title>
     <style type="text/css">
-      /* modern clearfix utility class */
-      .clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
       body {
         width: 90%;
         font-family: Arial, Verdana, sans-serif;
@@ -20,53 +12,39 @@
       .boord {
         border: 1px groove #665544;
         background-color: #00cc33;
-      }
-
-      p {
-        margin: 1%;
-        width: 98%;
-      }
-
-      @media screen and (min-width: 620px) {
-        p {
-          width: 30%;
-          float: left;
-        }
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
       }
     </style>
   </head>
   <body>
     <h1>The Evolution of the Bicycle</h1>
     <div class="boord">
-      <div class="clearfix">
-        <p>
-          In 1817 Baron von Drais invented a walking machine that would help him
-          get around the royal gardens faster.
-        </p>
-        <p>
-          The device know as the Draisienne (or "hobby horse") was made of wood,
-          and propelled by pushing your feed on the ground in a gliding
-          movement.
-        </p>
-        <p>
-          It was not seen a suitable for any place other than a well maintained
-          pathway.
-        </p>
-      </div>
-      <div class="clearfix">
-        <p>
-          In 1865, the velocipede (meaning "fast foot") attached pedals to the
-          front wheel, but its wooden structure made it extremely uncomfortable.
-        </p>
-        <p>
-          In 1870 the first all-metal machine appeared. The pedals were attached
-          directly to the front wheel.
-        </p>
-        <p>
-          Solid rubber tires and the long spokes of the large front wheel
-          provided a much smoother ride than its predecessor.
-        </p>
-      </div>
+      <p>
+        In 1817 Baron von Drais invented a walking machine that would help him
+        get around the royal gardens faster.
+      </p>
+      <p>
+        The device know as the Draisienne (or "hobby horse") was made of wood,
+        and propelled by pushing your feed on the ground in a gliding movement.
+      </p>
+      <p>
+        It was not seen a suitable for any place other than a well maintained
+        pathway.
+      </p>
+      <p>
+        In 1865, the velocipede (meaning "fast foot") attached pedals to the
+        front wheel, but its wooden structure made it extremely uncomfortable.
+      </p>
+      <p>
+        In 1870 the first all-metal machine appeared. The pedals were attached
+        directly to the front wheel.
+      </p>
+      <p>
+        Solid rubber tires and the long spokes of the large front wheel provided
+        a much smoother ride than its predecessor.
+      </p>
     </div>
   </body>
 </html>
