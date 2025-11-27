@@ -44,7 +44,7 @@
       }
 
       .navbar .logo {
-        display: block;
+        display: inline-block;
       }
 
       .navbar ul {
@@ -88,21 +88,19 @@
       }
 
       @media screen and (min-width: 760px) {
-        .logo {
+        .navbar .logo {
+          display: block;
           float: left;
         }
         .nav-icon {
           display: none;
         }
         .toggle {
-          display: inline-block;
+          display: block;
           position: static;
         }
         .navbar li {
           display: inline-block;
-        }
-        .navbar {
-          text-align: right;
         }
       }
     </style>
