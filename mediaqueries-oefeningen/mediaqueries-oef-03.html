@@ -12,30 +12,15 @@
       .boord {
         border: 1px groove #665544;
         background-color: #00cc33;
-        /* display: grid; */
-      }
-
-      p {
-        width: 30%;
-        float: left;
-        margin: 1%;
-      }
-
-      .clearfix::before,
-      .clearfix::after {
-        content: " ";
-        display: table;
-      }
-
-      .clearfix::after {
-        clear: both;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
       }
     </style>
   </head>
   <body>
     <h1>The Evolution of the Bicycle</h1>
     <div class="boord">
-      <div class="clearfix">
         <p>
           In 1817 Baron von Drais invented a walking machine that would help him
           get around the royal gardens faster.
@@ -49,8 +34,6 @@
           It was not seen a suitable for any place other than a well maintained
           pathway.
         </p>
-      </div>
-      <div class="clearfix">
         <p>
           In 1865, the velocipede (meaning "fast foot") attached pedals to the
           front wheel, but its wooden structure made it extremely uncomfortable.
@@ -63,7 +46,5 @@
           Solid rubber tires and the long spokes of the large front wheel
           provided a much smoother ride than its predecessor.
         </p>
-      </div>
-    </div>
   </body>
 </html>
