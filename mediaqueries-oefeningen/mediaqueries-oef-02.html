@@ -7,13 +7,15 @@
         font-family: Arial, Verdana, sans-serif;
         color: #665544;
       }
-
       .container {
         display: grid;
-        grid-template-areas: "col1 col2 col3 col4";
-        grid-template-columns: 1fr 1f 1fr 1fr;
+        grid-template-areas:
+          "col1"
+          "col2"
+          "col3"
+          "col4";
+        gap: 0.75rem;
       }
-
       .column1of4 {
         grid-area: col1;
       }
@@ -25,6 +27,22 @@
       }
       .column4of4 {
         grid-area: col4;
+      }
+
+      @media screen and (min-width: 780px) {
+        .container {
+          grid-template-areas:
+            "col1 col2"
+            "col3 col4";
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        .container {
+          grid-template-areas: "col1 col2 col3 col4";
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
       }
     </style>
   </head>
